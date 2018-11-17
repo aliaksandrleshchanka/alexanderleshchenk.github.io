@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Test MapList</title>
+</head>
+<body>
+	<div class="container">
+	<br>
+	<p>1) Return the name of the northernmost, easternmost, southernmost or westernmost city from the list, as requested by the caller. </p>
+	<p>Insert side of the world:</p>
+	<form>
+		<div class="form-row">
+			<div class="form-group col-md-10">
+    			<input type="text" id="sizeOf" class="form-control" name="sideOfTheWorld" placeholder="northernmost">
+    			<small class="form-text text-muted">Examples: northernmost, easternmost, southernmost or westernmost</small>
+  			</div>
+  			<div class="form-group col-md-2">
+  				<button type="button" class="btn btn-dark" onclick="mpList.first()">Find</button>
+  			</div>
+  		</div>
+	</form>
+	<br>
+	<p id="resultFirst"></p>
+	<hr>
+	<p>2) Pass longitude and latitude as parameters, and return the name of the city that is closest to that location.</p>
+	<p>Insert geographical coordinates:</p>
+	<form>
+		<div class="form-row">
+			<div class="form-group col-md-6">
+				<label>Latitude</label>
+    			<input type="text" id="latitude" class="form-control" name="latitude" placeholder="from 0 to 90">
+    			<div class="invalid-feedback">
+       				Please insert latitude.
+      			</div>	
+  			</div>
+  			<div class="form-group col-md-6">
+  				<label>Longitude</label>
+    			<input type="text" id="longitude" class="form-control" name="longitude" placeholder="from 0 to -180">
+    			<div class="invalid-feedback">
+       				Please insert longitude.
+      			</div>	
+  			</div>
+  		</div>
+  		<button type="button" class="btn btn-dark" onclick="mpList.second()">Find closest city</button>
+	</form>
+	<br>
+	<p id="resultTwo"></p>
+	<hr>
+	<p>3) Return a single string containing just the state abbreviations from the list of cities, each separated by a space. The method should eliminate duplicate states. The result string should not have leading or trailing spaces.</p>
+	<button type="button" class="btn btn-dark" onclick="mpList.third()">State abbreviations</button>
+	<br>
+	<br>
+	<p id="resultThree"></p>
+	</div>
+</body>
+
+
+<script src="js/Map.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+</html>
